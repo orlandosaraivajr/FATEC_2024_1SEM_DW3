@@ -26,3 +26,7 @@ lista.append(list(range(1,10)))
 lista.append('Café')
 
 # Exibir via print somente os elementos que sejam do tipo string
+print("Encontrando elementos string na lista  \n\n")
+for quadradinho in lista:
+    if type(quadradinho) == str:
+        print(quadradinho)
