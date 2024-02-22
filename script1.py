@@ -25,8 +25,15 @@ lista.append('Leite')
 lista.append(list(range(1,10)))
 lista.append('Café')
 
+# Desafio 1
 # Exibir via print somente os elementos que sejam do tipo string
 print("Encontrando elementos string na lista  \n\n")
 for quadradinho in lista:
     if type(quadradinho) == str:
         print(quadradinho)
+
+# Desafio 2
+# Dado uma string qualquer, separar as letras com o caracter pipe (|)
+# Exemplo:
+# Fatec => F | A | T | E | C
+ 
