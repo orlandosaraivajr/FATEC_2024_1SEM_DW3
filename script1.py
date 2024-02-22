@@ -25,3 +25,4 @@ lista.append('Leite')
 lista.append(list(range(1,10)))
 lista.append('Café')
 
+# Exibir via print somente os elementos que sejam do tipo string
