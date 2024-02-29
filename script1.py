@@ -37,3 +37,12 @@ for quadradinho in lista:
 # Exemplo:
 # Fatec => F | A | T | E | C
  
+ 
+ # 29/02/2024
+ # Desafio 3
+ # A partir de uma lista, criar uma lista apenas os itens não repetidos.
+ 
+ # Exemplo:
+ # Entrada: ["Pão","Leite","Ovo","Farinha" ,"Leite","Ovo"]
+ # Saída: ["Pão","Leite","Ovo","Farinha"]
+ 
