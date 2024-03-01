@@ -10,3 +10,6 @@
  - - Lista
  - - Tupla
  - - Range
+ - - Conjunto ( set )
+ - - Dicionários ( dict )
+ 

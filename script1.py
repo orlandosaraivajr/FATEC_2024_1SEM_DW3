@@ -46,3 +46,14 @@ for quadradinho in lista:
  # Entrada: ["Pão","Leite","Ovo","Farinha" ,"Leite","Ovo"]
  # Saída: ["Pão","Leite","Ovo","Farinha"]
  
+lista = ["Pão","Leite","Ovo","Farinha" ,"Leite","Ovo"]
+
+# Sem uso de set:
+lista2 = []
+for x in lista:
+    if x not in lista2:
+        lista2.append(x)
+
+# Solução com uso de set:
+lista3 = list(set(lista))
+ 
