@@ -23,13 +23,12 @@ que receba parâmetros e retorne a soma dos parâmetros numéricos somente.
 def soma(*parametros):
     soma = 0
     for elemento in parametros:
-        if type(elemento) == str:
-            pass
-        else:
+        if type(elemento) == int or type(elemento) == float:
             soma = soma + elemento
     return soma
 
 
 assert soma(1,2,3) == 6
 assert soma(1,2) == 3
-assert soma(1,2,3,'oi') == 6
+assert soma(1, 2, 3, 'oi') == 6
+assert soma(1.0, 2.0) == 3.0
