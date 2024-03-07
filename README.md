@@ -12,4 +12,6 @@
  - - Range
  - - Conjunto ( set )
  - - Dicionários ( dict )
+
+ - - Parâmetros via args (*) e kwargs (**) 
  

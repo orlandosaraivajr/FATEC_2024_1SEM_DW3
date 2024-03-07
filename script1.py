@@ -56,4 +56,26 @@ for x in lista:
 
 # Solução com uso de set:
 lista3 = list(set(lista))
- 
+
+'''
+07/03/2024
+Desafio: Crie uma função chamada "soma", 
+que receba dois parâmetros e retorne a soma dos parâmetros
+
+def soma(parametro1, parametro2):
+    return parametro1 + parametro2
+
+
+Desafio: Crie uma função chamada "soma", 
+que receba três parâmetros e retorne a soma dos parâmetros
+
+def soma(parametro1, parametro2, parametro3):
+    return parametro1 + parametro2 + parametro3
+'''
+
+''' Args e KWargs '''
+def soma(*parametros):
+    soma = 0
+    for elemento in parametros:
+        soma = soma + elemento
+    return soma
