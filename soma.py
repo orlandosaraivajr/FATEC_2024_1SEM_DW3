@@ -23,8 +23,11 @@ que receba parâmetros e retorne a soma dos parâmetros numéricos somente.
 def soma(*parametros):
     soma = 0
     for elemento in parametros:
-        if type(elemento) == int or type(elemento) == float:
+        try:
             soma = soma + elemento
+        except TypeError:
+            # raise TypeError('Soma não suportada')
+            pass
     return soma
 
 
