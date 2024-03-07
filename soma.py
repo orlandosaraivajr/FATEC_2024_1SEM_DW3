@@ -35,3 +35,16 @@ assert soma(1,2,3) == 6
 assert soma(1,2) == 3
 assert soma(1, 2, 3, 'oi') == 6
 assert soma(1.0, 2.0) == 3.0
+
+
+'''
+KWargs
+'''
+def teste(**parametros):
+    print(parametros)
+
+teste(nome='Orlando')
+teste(nome='Orlando',sobrenome='Saraiva')
+teste(nome='Orlando',sobrenome='Saraiva',disciplinas=['ED','DW3'])
+
+ 

@@ -14,4 +14,5 @@
  - - Dicionários ( dict )
 
  - - Parâmetros via args (*) e kwargs (**) 
+ - - Como lidar com Exceptions
  
