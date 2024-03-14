@@ -37,3 +37,8 @@ class CarrinhoCompra:
 cliente1 = CarrinhoCompra()
 cliente2 = CarrinhoCompra()
 cliente3 = CarrinhoCompra()
+
+class CarrinhoCompraInternacional(CarrinhoCompra):
+    pass
+
+clienteInternacional1 = CarrinhoCompraInternacional()
