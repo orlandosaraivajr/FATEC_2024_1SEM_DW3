@@ -5,6 +5,11 @@
       <title>Feriado de Natal</title>
     </head>
     <body>
+      {% if natal %}
+        <h1>É natal</h1>
+      {% else %}
         <h1>Não é natal</h1>
+      {% endif %}
+      {{ onde_noel_vai  }}
     </body>
 </html> 
