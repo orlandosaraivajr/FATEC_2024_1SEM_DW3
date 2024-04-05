@@ -9,3 +9,11 @@ class NatalTest(TestCase):
 
     def test_texto(self):
         self.assertContains(self.resp, 'natal')
+
+
+class CarnavalTest(TestCase):
+    def setUp(self):
+        self.resp = self.client.get('/carnaval')
+    
+    def test_url_ok(self):
+        self.assertEqual(self.resp.status_code, 200)
