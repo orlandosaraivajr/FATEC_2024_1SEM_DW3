@@ -56,3 +56,11 @@ class FeriadoModelTest(TestCase):
     
     def test_nome_feriado(self):
         self.assertEqual(self.cadastro.nome, 'Natal')
+
+from core.forms import FeriadoForm
+
+class FeriadoFormTest(TestCase):
+    def test_form_has_fields(self):
+        form = FeriadoForm()
+        expected = ['nome', 'dia', 'mes']
+        self.assertSequenceEqual(expected, list(form.fields))
