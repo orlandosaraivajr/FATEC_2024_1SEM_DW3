@@ -1,6 +1,8 @@
 from django.test import TestCase
+from .models import FeriadoModel
+from datetime import datetime
 
-class NatalTest(TestCase):
+class FeriadoVazioTest(TestCase):
     def setUp(self):
         self.resp = self.client.get('/')
 
@@ -8,19 +10,32 @@ class NatalTest(TestCase):
         self.assertEqual(200, self.resp.status_code)
 
     def test_texto(self):
-        self.assertContains(self.resp, 'natal')
+        self.assertContains(self.resp, 'Não tem feriado hoje')
 
+    def test_templateUsed(self):
+        self.assertTemplateUsed(self.resp, 'feriado.html')
 
-class CarnavalTest(TestCase):
+class FeriadoDiaArquivoMortoTest(TestCase):
     def setUp(self):
-        self.resp = self.client.get('/carnaval')
-    
-    def test_url_ok(self):
-        self.assertEqual(self.resp.status_code, 200)
+        hoje = datetime.today()
+        self.cadastro = FeriadoModel(
+            nome="Dia do Arquivo Morto",
+            dia=hoje.day,
+            mes=hoje.month)
+        self.cadastro.save()  
+        self.resp = self.client.get('/')
+
+    def test_200_response(self):
+        self.assertEqual(200, self.resp.status_code)
+
+    def test_texto(self):
+        self.assertContains(self.resp, 'Dia do Arquivo Morto')
+
+    def test_templateUsed(self):
+        self.assertTemplateUsed(self.resp, 'feriado.html')
 
 
-from .models import FeriadoModel
-from datetime import datetime
+
 
 class FeriadoModelTest(TestCase):
     def setUp(self):

@@ -2,14 +2,14 @@
 <html lang="pt_br">
     <head>
       <meta charset="UTF-8">
-      <title>Feriado de Natal</title>
+      <title>{{ title  }}</title>
     </head>
     <body>
-      {% if natal %}
-        <h1>É natal</h1>
+      {% if feriado %}
+        <h1>{{ nome_feriado  }}</h1>
       {% else %}
-        <h1>Não é natal</h1>
+        <h1>Não tem feriado hoje</h1>
       {% endif %}
-      {{ onde_noel_vai  }}
+      
     </body>
 </html> 
